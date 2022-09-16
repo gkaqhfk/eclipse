@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="org.zerock.mapper.SignupDAO">
+
+	<insert id ="insertMember" >
+		 INSERT INTO MEMBERSS(
+          	username, 
+            password, 
+            tel,
+            introducetext
+           
+        )VALUES(
+            #{username},
+            #{password},
+            #{tel},
+            #{introducetext})
+	</insert>
+	
+	  <!-- 로그인 -->
+	<select id="login" resultType="org.zerock.domain.SignupVO">
+		SELECT USERNAME, password FROM MEMBERSS
+		WHERE USERNAME = #{USERNAME}
+		AND password = #{password}   
+	</select>
+	
+	<select id="idcheck" parameterType="String" resultType="Integer">
+      SELECT COUNT(*) FROM MEMBERSS WHERE username = #{username}
+	</select>
+	
+
+</mapper>
