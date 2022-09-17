@@ -30,8 +30,8 @@ public class SingupController {
     
     //SignUp GET
     @RequestMapping(value="/signup.do", method=RequestMethod.GET)
-    public void signupGET() {
-        
+    public String signupGET() {
+        return "signup/signup";
     }
     
     //SignUp PSOT
@@ -45,14 +45,10 @@ public class SingupController {
     
     @RequestMapping("/idcheck.do")
     @ResponseBody
-    public Map<Object, Object> idcheck(@RequestBody String username) {
-        
-        int count = 0;
-        Map<Object, Object> map = new HashMap<Object, Object>();
- 
-        count = signupService.idcheck(username);
+    public Map<Object, Object> idcheck(@RequestBody SignupVO signVO) {
+        Map<Object, Object> map = new HashMap<>();
+        int count = signupService.idcheck(signVO);
         map.put("cnt", count);
- 
         return map;
     }
 	    

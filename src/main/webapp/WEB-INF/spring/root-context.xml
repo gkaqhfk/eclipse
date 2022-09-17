@@ -13,11 +13,11 @@
 		value="oracle.jdbc.driver.OracleDriver"></property>
 		<property name="jdbcUrl"
 		value="jdbc:oracle:thin:@localhost:1521:XE"></property> -->
-		
+
 		<property name="driverClassName"
 		value="net.sf.log4jdbc.sql.jdbcapi.DriverSpy"></property>
 		<property name="jdbcUrl" 
-		value="jdbc:log4jdbc:oracle:thin:@localhost:1521:xe"></property>
+		value="jdbc:log4jdbc:oracle:thin:@175.205.193.91:1521:xe"></property>
 		<property name="username" value="c##jane"></property>
 		<property name="password" value="1234"></property>
 	</bean>
@@ -37,8 +37,13 @@
 	
 	<mybatis-spring:scan base-package="org.zerock.mapper"/>
 	<context:component-scan base-package="org.zerock.service"></context:component-scan>
-	<mybatis-spring:scan base-package="org.zerock.controller"/>
+<!--	<mybatis-spring:scan base-package="org.zerock.controller"/>-->
 	<context:component-scan base-package="org.zerock.controller"></context:component-scan>
-	
-	
+
+
+<!--	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">-->
+<!--		<property name="basePackage" value="org.zerock.mapper" />-->
+<!--	</bean>-->
+
+
 </beans>

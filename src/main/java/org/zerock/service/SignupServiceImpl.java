@@ -18,9 +18,8 @@ public class SignupServiceImpl implements SignupService{
     }
 
 	@Override
-	public int idcheck(String username) {
-		// TODO Auto-generated method stub
-		return 0;
+	public int idcheck(SignupVO signVO) {
+		return dao.idcheck(signVO);
 	}
 }
    
