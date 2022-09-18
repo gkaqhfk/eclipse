@@ -20,12 +20,7 @@
             #{introducetext})
 	</insert>
 	
-	  <!-- 로그인 -->
-	<select id="login" resultType="org.zerock.domain.SignupVO">
-		SELECT USERNAME, password FROM MEMBERSS
-		WHERE USERNAME = #{USERNAME}
-		AND password = #{password}   
-	</select>
+	
 	
 	<select id="idcheck" parameterType="String" resultType="Integer">
       SELECT COUNT(*) FROM MEMBERSS WHERE username = #{username}

@@ -51,6 +51,7 @@ public class SingupController {
         map.put("cnt", count);
         return map;
     }
+    
 	    
 }
 
