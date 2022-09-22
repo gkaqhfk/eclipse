@@ -26,6 +26,7 @@ public class LoginController {
 	@Autowired
 	private Loginservice loginservice;
 	
+	
 	@RequestMapping("login.do")
 	public String login() {
 		return "login/login";
@@ -33,6 +34,7 @@ public class LoginController {
 	@RequestMapping("login_check.do")
 	public ModelAndView login_check(@ModelAttribute SignupVO vo, HttpSession session) {
 		String username = loginservice.loginCheck(vo, session);
+		
 		
 		ModelAndView mav = new ModelAndView();
 		if (username != null) {

@@ -9,7 +9,7 @@
 
 
   <!-- 로그인 -->
-	<select id="loginCheck" resultType="org.zerock.domain.SignupVO">
+	<select id="loginCheck" resultType="String">
 		SELECT username, password FROM MEMBERSS
 		WHERE username = #{username}
 		AND password = #{password}   

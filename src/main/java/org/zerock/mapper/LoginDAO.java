@@ -5,5 +5,5 @@ import org.zerock.domain.SignupVO;
 
 
 public interface LoginDAO {
-	public String loginCheck(SignupVO vo);
+	String loginCheck(SignupVO vo);
 }

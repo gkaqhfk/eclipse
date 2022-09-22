@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="org.zerock.mapper.MypageDAO">
+
+	<select id="readMember" resultType="org.zerock.domain.SignupVO">
+		select *
+		from MEMBERSS
+		where username=#{username}
+	</select>
+	
+	<select id="readMemberWithIDPW" resultType="org.zerock.domain.SignupVO">
+		select *
+		from MEMBERSS
+		where username=#{username} and password=#{password}
+	</select>
+		
+	<update id="updateMember">
+		update MEMBERSS set password=#{password}, tel=#{tel}, password=#{password}, introducetext=#{introducetext}
+		where username=#{username} 
+	</update>
+	
+	<delete id="deleteMember">
+		delete from MEMBERSS where username=#{username} and password=#{password}
+	</delete>
+
+</mapper>

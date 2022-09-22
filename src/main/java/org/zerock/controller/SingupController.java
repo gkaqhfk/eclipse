@@ -39,7 +39,7 @@ public class SingupController {
     public String signupPOST(SignupVO signVO) {
             
         signupService.insertMember(signVO);
-            
+    
         return "home";
     }
     

@@ -60,7 +60,7 @@
 									<div class="form-group has-feedback">
 										<button class="btn btn-success" type="submit" id="submit"
 											onclick="return DosignUp();">회원가입</button>
-										<a href="home.jsp" class="btn btn-primary">취소</a>
+										<a href="/home.jsp" class="btn btn-primary">취소</a>
 									</div>
 								</form>
 							</div>
