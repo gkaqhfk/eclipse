@@ -37,6 +37,7 @@ public class MyPageController {
 
 		//세션 객체 안에 있는 ID정보 저장
 		String username = (String) session.getAttribute("username");
+		
 		log.info("C: 회원정보보기 GET의 아이디 "+ username);
 
 		//서비스안의 회원정보보기 메서드 호출
