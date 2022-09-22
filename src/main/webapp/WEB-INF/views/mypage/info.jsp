@@ -10,8 +10,7 @@
 	<%
 	// 로그인 처리 -> 로그인 x (로그인페이지 이동)
 	String username = (String) session.getAttribute("username");
-	String tel = (String) session.getAttribute("tel");
-	String introducetext = (String) session.getAttribute("introducetext");
+	
 	if (username == null) {
 		response.sendRedirect("/login/login.do");
 	}
@@ -21,7 +20,7 @@
 <div class="menu">
     <label for="expand-menu"><div>메뉴</div></label><input type="checkbox" id="expand-menu" name="expand-menu">
     <ul>
-        <li><a href="/mypage/info" class="item"><div>내 정보</div></a></li>
+        <li><a href="/mypage/info" class="item"><div>내 정보</div></li>
         <li><a href="#" class="item"><div>내가 쓴 글</div></a></li>
         <li><a href="#" class="item"><div>내가 쓴 댓글</div></a></li>
         <li><a href="#" class="item"><div>메시지</div></a></li>
@@ -54,19 +53,20 @@
 							
 
 				<div class="form-group">
-					<label>전화번호</label> <input class="form-control" name="tel"
-						value="<%=tel%>" readonly>
-				</div>
+								<label>전화번호</label> <input class="form-control" name="tel"
+									value="${SignupVO.tel}" readonly>
+							</div>
 
-				<div class="form-group">
-				
-						<label>자기소개</label> <input class="form-control" name="introducetext"
-						value="<%=introducetext%>" readonly>
-				</div>
+							<div class="form-group">
+								<label>자기소개</label>
+								<textarea class="form-control" rows="3" name="introducetext"
+									value="${SignupVO.introducetext}" readonly></textarea>
+							</div>
+
 
 				<input type="button" value="메인으로" class="btn"
-					onclick="location.href='/mypage/mypage.do'"> <input
-					type="button" value="내 정보 수정" class="btn"
+					onclick="location.href='/mypage/mypage.do'"> 
+					<input type="button" value="내 정보 수정" class="btn"
 					onclick="location.href='/mypage/mypageupdate'">
 			</div>
 			<!--  end panel-body -->

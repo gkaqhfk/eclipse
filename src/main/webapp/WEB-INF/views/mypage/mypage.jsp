@@ -20,7 +20,7 @@
 <div class="menu">
     <label for="expand-menu"><div>메뉴</div></label><input type="checkbox" id="expand-menu" name="expand-menu">
     <ul>
-        <li><a href="/mypage/info" class="item"><div>내 정보</div></a></li>
+        <li><a href="/mypage/info" class="item"><div>내 정보</div></li>
         <li><a href="#" class="item"><div>내가 쓴 글</div></a></li>
         <li><a href="#" class="item"><div>내가 쓴 댓글</div></a></li>
         <li><a href="#" class="item"><div>메시지</div></a></li>

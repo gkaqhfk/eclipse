@@ -19,7 +19,7 @@
 	</select>
 		
 	<update id="updateMember">
-		update MEMBERSS set password=#{password}, tel=#{tel}, password=#{password}, introducetext=#{introducetext}
+		update MEMBERSS set password=#{password}, tel=#{tel}, introducetext=#{introducetext}
 		where username=#{username} 
 	</update>
 	

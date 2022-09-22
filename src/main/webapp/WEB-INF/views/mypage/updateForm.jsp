@@ -38,7 +38,6 @@
         <li><a href="/mypage/delete" class="item"><div>회원 탈퇴</div></a></li>
     </ul>
 </div>
-    
 	<div class="row">
 		<div class="col-lg-12">
 			<h1 class="page-header">My Page</h1>
